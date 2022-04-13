@@ -32,7 +32,7 @@ Run the container, specifying the path to the OpenTX source as a mount volume:
 
 Example of building Jumper T16 firmware:
 
-   `docker run --rm -it -e "BOARD_NAME=jumper_t16" -v [OpenTX Source Path]:/opentx ghcr.io/pfeerick/opentx-fw-build`
+   `docker run --rm -it -e "BOARD_NAME=t16" -v [OpenTX Source Path]:/opentx ghcr.io/pfeerick/opentx-fw-build`
 
 The compiled firmware image will be placed in the root of the source directory when the build has finished.
 
