@@ -28,14 +28,12 @@ You have to specify a board name as first env variable (BOARD_NAME), it is lower
 ## Build the Firmware
 Run the container, specifying the path to the OpenTX source as a mount volume:
 
-```
-docker run --rm -it -e "BOARD_NAME=board_name" -v [OpenTX Source Path]:/opentx ghcr.io/pfeerick/opentx-fw-build
-```
+   `docker run --rm -it -e "BOARD_NAME=board_name" -v [OpenTX Source Path]:/opentx ghcr.io/pfeerick/opentx-fw-build`
 
 Example of building Jumper T16 firmware:
-```
-docker run --rm -it -e "BOARD_NAME=t16" -v "/home/pfeerick/github/opentx.git:/opentx" ghcr.io/pfeerick/opentx-fw-build
-```
+
+   `docker run --rm -it -e "BOARD_NAME=jumper_t16" -v [OpenTX Source Path]:/opentx ghcr.io/pfeerick/opentx-fw-build`
+
 The compiled firmware image will be placed in the root of the source directory when the build has finished.  
 
 The default output name is `opentx-boardname-2.3.ver.bin` but this will vary depending on any optional flags that may have been passed.
@@ -48,6 +46,5 @@ Default flags will be replaced by the new value, additional flags will be append
 ### Examples
 
 Build from the source in `/home/pfeerick/opentx.git` for x10 and disable `HELI`:
-```
-docker run --rm -it -v "/home/pfeerick/opentx.git:/opentx" -e "BOARD_NAME=x10" -e "CMAKE_FLAGS=HELI=NO" ghcr.io/pfeerick/opentx-fw-build
-```
+
+   `docker run --rm -it -v "/home/pfeerick/opentx.git:/opentx" -e "BOARD_NAME=x10" -e "CMAKE_FLAGS=HELI=NO" ghcr.io/pfeerick/opentx-fw-build`
