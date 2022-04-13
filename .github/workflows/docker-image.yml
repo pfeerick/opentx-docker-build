@@ -33,7 +33,7 @@ jobs:
       - name: Build opentx-fw-build
         uses: docker/build-push-action@v2
         with:
-          context: /
+          context: .
           file: Dockerfile
           push: false
           tags: ghcr.io/pfeerick/opentx-fw-build:latest
@@ -42,7 +42,7 @@ jobs:
       - name: Build and push opentx-fw-build
         uses: docker/build-push-action@v2
         with:
-          context: /
+          context: .
           file: Dockerfile
           push: true
           tags: ghcr.io/pfeerick/opentx-fw-build:latest
