@@ -12,7 +12,7 @@ Running the container will compile the firmware from a local source tree and pro
    
 1. Pull the container:
 
-   `docker pull pfeerick/opentx-fw-build`
+   `docker pull ghcr.io/pfeerick/opentx-fw-build`
 
 1. Clone the OpenTX repository:
 
