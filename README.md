@@ -9,7 +9,7 @@ Running the container will compile the firmware from a local source tree and pro
 ## Setup
 1. [Install Docker](https://docs.docker.com/install/)
    * If installing on Windows choose **Linux Containers** when prompted
-   
+
 1. Pull the container:
 
    `docker pull ghcr.io/pfeerick/opentx-fw-build`
@@ -24,7 +24,7 @@ Use your tool of choice to make changes to the OpenTX source.
 
 ## Board target name
 You have to specify a board name as first env variable (BOARD_NAME), it is lowercase name like x10, t12, etc
-   
+
 ## Build the Firmware
 Run the container, specifying the path to the OpenTX source as a mount volume:
 
@@ -34,7 +34,7 @@ Example of building Jumper T16 firmware:
 
    `docker run --rm -it -e "BOARD_NAME=jumper_t16" -v [OpenTX Source Path]:/opentx ghcr.io/pfeerick/opentx-fw-build`
 
-The compiled firmware image will be placed in the root of the source directory when the build has finished.  
+The compiled firmware image will be placed in the root of the source directory when the build has finished.
 
 The default output name is `opentx-boardname-2.3.ver.bin` but this will vary depending on any optional flags that may have been passed.
 
